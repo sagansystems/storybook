@@ -46,6 +46,10 @@ export default function() {
       // Add support to NODE_PATH. With this we could avoid relative path imports.
       // Based on this CRA feature: https://github.com/facebookincubator/create-react-app/issues/253
       modules: ['node_modules'].concat(nodePaths),
+      alias: {
+        react: 'inferno-compat',
+        'react-dom': 'inferno-compat',
+      },
     },
     performance: {
       hints: false,
